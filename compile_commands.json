@@ -1,0 +1,15 @@
+[
+  {
+    "arguments": [
+      "/sbin/cc",
+      "-I/usr/include/hidapi",
+      "-c",
+      "-o",
+      "obj/thermaltake_riing_quad.o",
+      "src/thermaltake_riing_quad.c"
+    ],
+    "directory": "/home/at1ass/work_files/hidapi",
+    "file": "/home/at1ass/work_files/hidapi/src/thermaltake_riing_quad.c",
+    "output": "/home/at1ass/work_files/hidapi/obj/thermaltake_riing_quad.o"
+  }
+]
