@@ -1,6 +1,6 @@
 # tool macros
 CC ?= gcc
-CFLAGS := -lhidapi-hidraw -I/usr/include/hidapi
+CFLAGS := -lhidapi-hidraw
 DBGFLAGS := -g
 COBJFLAGS := $(CFLAGS) -c
 
@@ -10,6 +10,7 @@ OBJ_PATH := obj
 SRC_PATH := src
 DBG_PATH := debug
 
+INCLUDE_PATH := ./include /usr/include/hidapi
 # compile macros
 TARGET_NAME := thermaltake_riing_quad
 ifeq ($(OS),Windows_NT)
@@ -34,11 +35,11 @@ CLEAN_LIST := $(TARGET) \
 default: makedir all
 
 # non-phony targets
-$(TARGET): $(OBJ)
-	$(CC) -o $@ $(OBJ) $(CFLAGS)
+$(TARGET): $(OBJ) $(INCLUDE_PATH)
+	$(CC) -o $@ $(OBJ) $(CFLAGS) $(INCLUDE_PATH:%=-I %)
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c*
-	$(CC) $(COBJFLAGS) -o $@ $<
+	$(CC) $(COBJFLAGS) $(INCLUDE_PATH:%=-I %) -o $@ $<
 
 $(DBG_PATH)/%.o: $(SRC_PATH)/%.c*
 	$(CC) $(COBJFLAGS) $(DBGFLAGS) -o $@ $<
