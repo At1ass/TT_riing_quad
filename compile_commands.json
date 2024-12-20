@@ -8,27 +8,11 @@
       "-I",
       "/usr/include/hidapi",
       "-o",
-      "obj/hidapi_wrapper.o",
-      "src/hidapi_wrapper.c"
+      "obj/config.o",
+      "src/config.c"
     ],
     "directory": "/home/at1ass/work_files/hidapi",
-    "file": "/home/at1ass/work_files/hidapi/src/hidapi_wrapper.c",
-    "output": "/home/at1ass/work_files/hidapi/obj/hidapi_wrapper.o"
-  },
-  {
-    "arguments": [
-      "/sbin/cc",
-      "-c",
-      "-I",
-      "./include",
-      "-I",
-      "/usr/include/hidapi",
-      "-o",
-      "obj/thermaltake_riing_quad.o",
-      "src/thermaltake_riing_quad.c"
-    ],
-    "directory": "/home/at1ass/work_files/hidapi",
-    "file": "/home/at1ass/work_files/hidapi/src/thermaltake_riing_quad.c",
-    "output": "/home/at1ass/work_files/hidapi/obj/thermaltake_riing_quad.o"
+    "file": "/home/at1ass/work_files/hidapi/src/config.c",
+    "output": "/home/at1ass/work_files/hidapi/obj/config.o"
   }
 ]

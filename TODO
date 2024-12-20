@@ -4,3 +4,4 @@
 4. Auto fan control( CPU, GPU, etc temp)
 5. Create this app as daemon
 6. Hot reload conf
+7. Replace getopt on getopt_long

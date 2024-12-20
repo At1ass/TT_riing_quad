@@ -7,6 +7,7 @@
 #include <unistd.h>
 
 #include "hidapi_wrapper.h"
+#include "config.h"
 
 typedef struct {
     char *key;
@@ -40,6 +41,7 @@ main(int argc, char *argv[]) {
     char *mode = NULL;
     size_t key_mode;
     size_t info = 0;
+    config_t* config;
 
     if (argc < 2) {
         printf("Can't run without params\n");
@@ -65,6 +67,7 @@ main(int argc, char *argv[]) {
             }
     }
 
+    config = read_config();
     key_mode = key_from_string(mode);
 
     if (key_mode == -1) {
@@ -103,6 +106,7 @@ main(int argc, char *argv[]) {
             }
         }
         end_hid();
+        free_config(&config);
     }
 
     return 0;

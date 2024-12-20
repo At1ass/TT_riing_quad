@@ -61,7 +61,7 @@ show_firmware_version()
     hid_write(dev, usb_buf, THERMALTAKE_QUAD_PACKET_SIZE);
     hid_read_timeout(dev, usb_buf, THERMALTAKE_QUAD_PACKET_SIZE, THERMALTAKE_QUAD_INTERRUPT_TIMEOUT);
 
-    printf("Firmware version: %d.%d.%d", usb_buf[2], usb_buf[3], usb_buf[4]);
+    printf("Firmware version: %d.%d.%d\n", usb_buf[2], usb_buf[3], usb_buf[4]);
 }
 
 void

@@ -1,0 +1,36 @@
+title = "TT Riing Quad controller settings"
+
+controllers = [
+  0x232b, 
+  0x232c,
+  0x232d,
+  0x232e
+]
+
+[[presets]]
+  name = "silent"
+  values = [30, 30, 30, 30]
+
+[[presets]]
+  name = "max_perf"
+  values = [90, 90, 90, 90]
+
+[[presets]]
+  name = "cpu_heavy"
+  values = [50, 90, 90, 40]
+
+[[presets]]
+  name = "gpu_heavy"
+  values = [70, 40, 50, 70]
+
+[[presets]]
+  name = "gaming"
+  values = [50, 65, 65, 65]
+    
+
+[controller]
+  product_id = 0x232b
+  value = 70
+[controller2]
+  product_id = 0x232c
+  value = 70
